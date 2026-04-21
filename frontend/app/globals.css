@@ -1,0 +1,97 @@
+@import "tailwindcss";
+
+@theme inline {
+  --color-primary: #4f46e5;
+  --color-primary-hover: #4338ca;
+  --font-sans: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+}
+
+body {
+  background-color: #f8fafc; /* Tailwind slate-50 */
+  color: #1e293b; /* Tailwind slate-800 */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Custom Utilities for standard table views */
+.table-th {
+  @apply px-4 py-3 text-left text-xs font-semibold text-gray-600 uppercase tracking-wider border-b border-gray-200 bg-gray-50;
+}
+
+.table-td {
+  @apply px-4 py-4 border-b border-gray-200 whitespace-nowrap text-sm text-gray-700;
+}
+
+.input-field {
+  @apply w-full px-3 py-2 bg-white border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 transition-colors duration-200;
+}
+
+.btn-primary {
+  @apply w-full md:w-auto inline-flex justify-center items-center px-4 py-2 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 transition-colors duration-200;
+}
+
+.btn-secondary {
+  @apply w-full md:w-auto inline-flex justify-center items-center px-4 py-2 border border-gray-300 rounded-md shadow-sm text-sm font-medium text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 transition-colors duration-200;
+}
+
+.btn-danger {
+  @apply inline-flex justify-center items-center px-3 py-1.5 border border-transparent rounded text-xs font-medium text-red-700 bg-red-100 hover:bg-red-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-500 transition-colors duration-200;
+}
+
+.btn-action {
+  @apply inline-flex justify-center items-center px-3 py-1.5 border border-gray-300 rounded text-xs font-medium text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 transition-colors duration-200;
+}
+
+.form-label {
+  @apply block text-sm font-medium text-gray-700 mb-1;
+}
+
+.card {
+  @apply bg-white rounded-lg shadow-sm border border-gray-200 overflow-hidden;
+}
+
+.card-header {
+  @apply px-6 py-4 border-b border-gray-200 bg-gray-50/50 flex justify-between items-center;
+}
+
+.card-title {
+  @apply text-lg font-semibold text-gray-900;
+}
+
+.card-body {
+  @apply p-6;
+}
+.dropdown-container {
+  @apply relative w-full;
+}
+
+.dropdown-menu {
+  @apply absolute z-50 mt-1 w-full bg-white shadow-xl rounded-md py-1 text-sm border border-gray-200 overflow-auto focus:outline-none;
+  max-height: 250px;
+  top: 100%;
+  left: 0;
+}
+
+.dropdown-item {
+  @apply text-gray-700 cursor-pointer select-none relative py-2.5 px-4 hover:bg-indigo-50 hover:text-indigo-700 transition-colors duration-150 flex flex-col;
+}
+
+.dropdown-item-id {
+  @apply text-xs text-gray-400 font-mono;
+}
+
+.dropdown-item-title {
+  @apply font-medium;
+}
+
+.dropdown-item-selected {
+  @apply bg-indigo-50 text-indigo-900 font-semibold;
+}
+
+.search-input-wrapper {
+  @apply relative flex items-center;
+}
+
+.search-clear-btn {
+  @apply absolute right-2 text-gray-400 hover:text-gray-600 cursor-pointer p-1;
+}

@@ -1,0 +1,56 @@
+# ==========================================
+# 📂 Root & Generic
+# ==========================================
+.DS_Store
+Thumbs.db
+*.log
+.env
+.env.*
+!.env.example
+
+# ==========================================
+# 🐍 Backend (FastAPI / Python)
+# ==========================================
+# Python Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+*.pyd
+
+# Backend specific ignores
+backend/.venv/
+backend/venv/
+backend/env/
+backend/.pytest_cache/
+backend/.coverage
+backend/htmlcov/
+backend/*.db
+backend/*.sqlite3
+
+# ==========================================
+# 📦 Frontend (Next.js / Node)
+# ==========================================
+frontend/node_modules/
+frontend/.next/
+frontend/out/
+frontend/build/
+frontend/dist/
+frontend/.vercel
+frontend/npm-debug.log*
+
+# ==========================================
+# 🐳 Docker / Podman / Infrastructure
+# ==========================================
+# Ignore the actual database data folder if mapped locally
+postgres_data/
+pgdata/
+.data/
+
+# ==========================================
+# 🖥️ IDEs
+# ==========================================
+.vscode/
+.idea/
+*.swp
+*.swo
