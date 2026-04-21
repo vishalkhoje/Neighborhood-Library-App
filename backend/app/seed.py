@@ -89,7 +89,7 @@ def seed_data():
             ),
             Book(
                 isbn_code="9780747532699",
-                book_title="Harry Potter and the Philosopher's Stone",
+                book_title="Harry Potter",
                 author_name="J.K. Rowling",
                 category="Fantasy",
                 publisher_name="Bloomsbury",
@@ -111,7 +111,7 @@ def seed_data():
             ),
             Book(
                 isbn_code="9781119481867",
-                book_title="Machine Learning Yearning",
+                book_title="Machine Learning",
                 author_name="Andrew Ng",
                 category="Technology",
                 publisher_name="DeepLearning.AI",

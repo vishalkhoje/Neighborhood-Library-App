@@ -1,6 +1,16 @@
 def test_issue_and_return_book(client):
     # 1. Create a Book
-    book_res = client.post("/api/books/", json={"isbn_code": "I001", "book_title": "Test Book", "publisher_name": "Pub", "location_name": "Loc", "publication_year": 2020, "book_edition": "1st", "copies_total": 1})
+    book_res = client.post("/api/books/", json={
+        "isbn_code": "I001", 
+        "book_title": "Test Book", 
+        "author_name": "Test Author",
+        "publisher_name": "Pub", 
+        "location_name": "Loc", 
+        "publication_year": 2020, 
+        "book_edition": "1st", 
+        "copies_total": 1
+    })
+    assert book_res.status_code == 201
     book_id = book_res.json()["book_id"]
 
     # 2. Create a Member
